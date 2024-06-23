@@ -1,0 +1,59 @@
+@import "../../util/variables.scss";
+
+.footer__container {
+  background-color: $secodary-mirage-blue;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0 3.5rem 0;
+
+  &__links {
+    margin: 2.5rem 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    &_link {
+      text-decoration: none;
+      color: $primary-link-water-white;
+      opacity: 0.7;
+      font-size: $font-size-15px;
+      font-weight: bold;
+      font-family: var(--font-public-sans);
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    & > * {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 0;
+    flex-direction: row;
+    padding: 2rem 2.5rem;
+
+    &__links {
+      margin: 0;
+      margin-left: 4rem;
+      flex-direction: row;
+      gap: 2.5rem;
+    }
+
+    &__icons {
+      margin-left: auto;
+    }
+  }
+}

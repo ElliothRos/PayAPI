@@ -1,0 +1,25 @@
+@import "../../util/variables.scss";
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-public-sans);
+
+  &__img {
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.125rem; 
+    color: $secondary-san-juan-blue;
+    margin-bottom: 1rem;
+  }
+
+  &__desc {
+    font-size: $font-size-15px;
+    color: $secondary-light-san-juan-blue;
+    line-height: 25px;
+  }
+}

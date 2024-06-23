@@ -1,0 +1,27 @@
+@import "../../util/variables.scss";
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  &__name {
+    color: $secondary-san-juan-blue;
+    font-size: 1rem;
+    font-family: var(--font-public-sans);
+  }
+
+  &__img {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.disabled &__img {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &.disabled &__name {
+    opacity: .5;
+  }
+}

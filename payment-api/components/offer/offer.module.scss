@@ -1,0 +1,122 @@
+@import "../../util/variables.scss";
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__name {
+    color: $primary-dark-pink;
+    font-family: var(--font-dm-serif-display);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+  }
+
+  &__price {
+    color: $secondary-san-juan-blue;
+    font-family: var(--font-dm-serif-display);
+    font-weight: 400;
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $secondary-san-juan-blue;
+      opacity: 0.25;
+      left: 0;
+      bottom: -1.749rem;
+    }
+  }
+
+  &__description {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    justify-content: center;
+    // margin-bottom: 3rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100vw - 3rem);
+      height: 1px;
+      background-color: $secondary-san-juan-blue;
+      opacity: 0.25;
+      bottom: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__btn {
+    margin-top: 3rem;
+    color: $secondary-san-juan-blue;
+    outline-color: $secondary-san-juan-blue;
+
+    &:hover {
+      background-color: $secondary-san-juan-blue;
+      outline: none;
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .offer {
+    &__name {
+      margin-bottom: 1rem;
+    }
+
+    &__description {
+      display: block;
+      text-align: center;
+      color: $secondary-light-san-juan-blue;
+      font-family: var(--font-public-sans);
+      font-size: $font-size-15px;
+      line-height: 28px;
+      margin-bottom: 1rem;
+    }
+
+    &__list {
+      &::after {
+        width: calc(33vw - 2rem);
+        max-width: 20.7rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1026px) {
+  .offer {
+    align-items: flex-start;
+
+    &__price {
+      text-align: left;
+    }
+
+    &__description {
+      text-align: left;
+    }
+
+    &__list {
+      &::after {
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+}

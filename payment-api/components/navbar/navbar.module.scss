@@ -1,0 +1,123 @@
+@import "../../util/variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+ 
+  z-index: 10;
+  position: relative;
+}
+
+.nav {
+  padding: 0 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8.75rem;
+  gap: 2rem;
+  background-color: $secodary-mirage-blue;
+  transition: transform 0.8s;
+  transform: translateX(100vw);
+
+  &::after {
+    content: "";
+    width: calc(100% - (1.75rem * 2));
+    height: 1px;
+    background-color: $primary-link-water-white;
+    opacity: 15%;
+    position: absolute;
+    top: 6.3rem;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: var(--font-public-sans);
+    color: $primary-link-water-white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    opacity: 70%;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.responsive_nav {
+    transform: translateX(20vw);
+  }
+
+  &__btn {
+    background: none;
+    outline: none;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__btn_close {
+    position: absolute;
+    top: 3rem;
+    right: 1.75rem;
+  }
+
+  &__btn_open {
+    margin-left: auto;
+  }
+
+  &__btn_schedule {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .nav {
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    transform: none;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    
+
+    &::after {
+      display: none;
+    }
+
+    &__links {
+      margin-left: 4rem;
+      flex-direction: row;
+    }
+
+    &__link {
+      font-size: $font-size-15px;
+      color: $secondary-san-juan-blue;
+      opacity: 0.7;
+    }
+
+    &__btn {
+      visibility: hidden;
+      display: none;
+    }
+
+    &__btn_schedule {
+      width: auto;
+      margin-left: auto;
+    }
+  }
+}

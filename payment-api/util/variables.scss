@@ -1,0 +1,58 @@
+$primary-dark-pink: #ba4270;
+$primary-link-water-white: #fbfcfe;
+$primary-background-color: #edf3f8;
+
+$secondary-san-juan-blue: #36536b;
+$secodary-mirage-blue: #1b262f;
+$secondary-charm-pink: #da6d97;
+$secondary-light-san-juan-blue: #6c8294;
+
+$font-size-15px: 0.9375rem;
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1.75rem;
+  font-size: 0.9375rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: var(--font-public-sans);
+}
+
+.btn-primary {
+  background-color: $primary-dark-pink;
+  color: white;
+
+  &:hover {
+    background-color: #da6d97;
+  }
+}
+
+.btn-ghost {
+  outline: 1px solid $primary-link-water-white;
+  background-color: transparent;
+  color: $primary-link-water-white;
+
+  &:hover {
+    background-color: white;
+    color: $secodary-mirage-blue;
+  }
+}
+
+.h3--big {
+  font-family: var(--font-dm-serif-display);
+  color: $secondary-san-juan-blue;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .h3--big {
+    font-size: 3rem;
+  }
+}

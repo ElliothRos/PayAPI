@@ -1,0 +1,22 @@
+@import "../../util/variables.scss";
+
+.input {
+  padding: 1rem 1.75rem;
+  font-family: var(--font-public-sans);
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  color: $secondary-san-juan-blue;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .input {
+    box-shadow: none;
+  }
+}
