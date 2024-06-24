@@ -4,6 +4,7 @@ import styles from "./page_pricing.module.scss";
 import "../../util/variables.scss";
 import Offer, { OfferProps } from "@/components/offer/offer";
 import Footer from "@/components/footer/footer";
+import Ready from "@/components/ready/ready";
 
 export default function Pricing() {
   const offers: OfferProps[] = [
@@ -74,6 +75,10 @@ export default function Pricing() {
             />
           ))}
         </div>
+      </section>
+
+      <section className={`${styles.ready} cotnainer`}>
+        <Ready />
       </section>
 
       <Footer />

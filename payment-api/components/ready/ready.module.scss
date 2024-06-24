@@ -1,0 +1,49 @@
+@import "../../util/variables.scss";
+
+.ready {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 1.5rem 5rem 1.5rem;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    &_btn {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ready {
+    padding-bottom: 6.25rem;
+
+    &__form {
+      display: flex;
+      align-items: center;
+      background-color: $primary-link-water-white;
+      margin: 1.5rem;
+      box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+      border-radius: 30px;
+      max-width: 28.5rem;
+      margin: 0 auto;
+      width: 100%;
+
+      &_input {
+        margin-top: 0;
+        flex-grow: 1;
+        width: auto;
+      }
+
+      &_btn {
+        margin-top: 0;
+        width: auto;
+      }
+    }
+  }
+}

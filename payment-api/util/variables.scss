@@ -56,3 +56,10 @@ $font-size-15px: 0.9375rem;
     font-size: 3rem;
   }
 }
+
+
+@media (min-width: 1026px) {
+  .h3--big {
+    font-size: 3.5rem;
+  }
+}

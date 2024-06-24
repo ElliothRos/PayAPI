@@ -37,7 +37,7 @@ export default function Offer({
         ))}
       </ul>
 
-      <button className={`btn btn-ghost ${styles.offer__btn}`}>
+      <button className={`btn ${styles.offer__btn}`}>
         Request Access
       </button>
     </div>

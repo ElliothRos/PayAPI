@@ -65,7 +65,8 @@
   &__btn {
     margin-top: 3rem;
     color: $secondary-san-juan-blue;
-    outline-color: $secondary-san-juan-blue;
+    background: transparent;
+    outline: 1px solid $secondary-san-juan-blue;
 
     &:hover {
       background-color: $secondary-san-juan-blue;

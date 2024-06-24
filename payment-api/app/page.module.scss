@@ -3,10 +3,6 @@
 .main {
   background-color: $primary-background-color;
   overflow: hidden;
-
-  &__nav {
-    padding: 2.5rem 1.5rem 0 1.5rem;
-  }
 }
 
 .hero {
@@ -190,33 +186,12 @@
 }
 
 .ready {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
   padding: 0 1.5rem 5rem 1.5rem;
-
-  &__title {
-    margin-bottom: 2rem;
-  }
-
-  &__form {
-    &_btn {
-      margin-top: 1rem;
-      width: 100%;
-    }
-  }
 }
 
 // ************* TABLET MEDIA QUERY *************
 
 @media (min-width: 768px) {
-  .main {
-    &__nav {
-      padding: 2.5rem 2.5rem 0 2.5rem;
-    }
-  }
-
   .hero {
     padding: 0 6.125rem 5rem 6.125rem;
 
@@ -310,13 +285,6 @@
 // ************* DESKTOP MEDIA QUERY *************
 
 @media (min-width: 1400px) {
-  .main {
-    &__nav {
-      max-width: 69.375rem;
-      margin: 0 auto;
-      padding: 2.5rem 0 0 0;
-    }
-  }
 
   .hero {
     flex-direction: row-reverse;

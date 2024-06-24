@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <header className={styles.header}>
-      <Image className={styles.header__logo} src={logo} alt="PayAPI logo" />
+      <Link href={"/"}><Image className={styles.header__logo} src={logo} alt="PayAPI logo" /></Link>
       <nav ref={navRef} className={styles.nav}>
         <ul className={styles.nav__links}>
           <li>
@@ -27,12 +27,12 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link className={styles.nav__link} href={"#"}>
+            <Link className={styles.nav__link} href={"/about"}>
               About
             </Link>
           </li>
           <li>
-            <Link className={styles.nav__link} href={"#"}>
+            <Link className={styles.nav__link} href={"/contact"}>
               Contact
             </Link>
           </li>

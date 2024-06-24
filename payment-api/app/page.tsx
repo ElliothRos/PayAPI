@@ -26,6 +26,7 @@ import SecondaryFeature, {
   SecondaryFeatureProps,
 } from "@/components/secondaryFeature/secondaryFeature";
 import Footer from "@/components/footer/footer";
+import Ready from "@/components/ready/ready";
 
 export default function Home() {
   const secondaryFeatures: SecondaryFeatureProps[] = [
@@ -51,7 +52,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.main__nav}>
+      <div className={`${styles.main__nav} container`}>
         <Navbar />
       </div>
 
@@ -68,7 +69,9 @@ export default function Home() {
             <div className={styles.hero__content_form_input}>
               <EmailInput />
             </div>
-            <button className={`btn btn-primary ${styles.hero__content_form_btn}`}>
+            <button
+              className={`btn btn-primary ${styles.hero__content_form_btn}`}
+            >
               Schedule a Demo
             </button>
           </form>
@@ -172,15 +175,7 @@ export default function Home() {
       </section>
 
       <section className={styles.ready}>
-        <h3 className={`h3--big ${styles.ready__title}`}>Ready to start?</h3>
-        <form className={styles.ready__form}>
-          <div className={styles.ready__form_input}>
-            <EmailInput />
-          </div>
-          <button className={`btn btn-primary ${styles.ready__form_btn}`}>
-            Schedule a Demo
-          </button>
-        </form>
+        <Ready />
       </section>
 
       <Footer />
