@@ -4,11 +4,18 @@
   background-color: $secodary-mirage-blue;
 }
 
+.footer_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2.5rem 0 3.5rem 0;
+  position: relative;
+  z-index: 10;
 
   &__links {
     margin: 2.5rem 0;
@@ -37,6 +44,19 @@
       cursor: pointer;
     }
   }
+
+  &__circle {
+    position: absolute;
+    height: 48.75rem;
+    width: 48.75rem;
+    background-image: url("/bg-pattern-circle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    // bottom: -50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: 768px) {
@@ -54,6 +74,14 @@
 
     &__icons {
       margin-left: auto;
+    }
+
+    &__circle {
+      top: -50%;
+      // right: -37%;
+      right: -20rem;
+      transform: none;
+      left: auto;
     }
   }
 }

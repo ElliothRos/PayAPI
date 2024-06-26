@@ -21,8 +21,8 @@
 
 @media (min-width: 768px) {
   .ready {
-    padding-bottom: 6.25rem;
-
+    padding: 0 2.5rem 6.25rem 2.5rem;
+    
     &__form {
       display: flex;
       align-items: center;
@@ -44,6 +44,22 @@
         margin-top: 0;
         width: auto;
       }
+    }
+  }
+}
+
+@media (min-width: 1026px) {
+  .ready {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__form {
+      margin: 0;
     }
   }
 }

@@ -1,0 +1,116 @@
+@import "../../util/variables.scss";
+
+.main {
+  background-color: $primary-background-color;
+}
+
+.contact {
+  &__title {
+    margin-top: 3rem;
+    text-align: center;
+    max-width: 20.43rem;
+    margin: 3rem auto 2.5rem auto;
+  }
+}
+
+.partners {
+  padding: 5rem 1.5rem;
+
+  &__title {
+    font-size: 1.5rem;
+    color: $secondary-san-juan-blue;
+    opacity: 0.75;
+    font-family: var(--font-dm-serif-display);
+    font-weight: 400;
+    text-align: center;
+    max-width: 20.43rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5rem;
+    align-items: center;
+    max-width: 20.43rem;
+    margin: 0 auto;
+
+    & > *:nth-child(2n) {
+      justify-self: end;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    &__title {
+      max-width: 34rem;
+      margin-top: 4.75rem;
+    }
+  }
+
+  .partners {
+    padding: 4rem 2.5rem 6.25rem 2.5rem;
+
+    &__title {
+      max-width: 27.8125rem;
+    }
+
+    &__logos {
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 33.75rem;
+      place-items: center;
+
+      & > *:nth-child(2n) {
+        justify-self: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1026px) {
+  .contact {
+    &__title {
+      text-align: left;
+      max-width: 45.625rem;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 5rem;
+      margin-bottom: 2.75rem;
+
+      padding: 0;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+  }
+
+  .partners {
+    padding: 0;
+    margin: 0;
+    max-width: 33.8rem;
+    width: 100%;
+
+    &__title {
+      text-align: left;
+      margin: 0;
+      margin-bottom: 2.5rem;
+      margin-left: 1.6rem;
+    }
+
+    &__logos {
+      max-width: 33.8rem;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

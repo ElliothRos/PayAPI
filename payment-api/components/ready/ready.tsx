@@ -3,7 +3,7 @@ import EmailInput from "../emailInput/emailInput";
 
 export default function Ready() {
   return (
-    <div className={styles.ready}>
+    <div className={`${styles.ready} container`}>
       <h3 className={`h3--big ${styles.ready__title}`}>Ready to start?</h3>
       <form className={styles.ready__form}>
         <div className={styles.ready__form_input}>
