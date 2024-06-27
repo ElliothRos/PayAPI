@@ -11,6 +11,10 @@
     max-width: 20.43rem;
     margin: 3rem auto 2.5rem auto;
   }
+
+  &__content {
+    padding: 0 1.5rem;
+  }
 }
 
 .partners {
@@ -91,6 +95,7 @@
       justify-content: space-between;
       width: 100%;
       margin-bottom: 5rem;
+      padding: 0;
     }
   }
 

@@ -52,7 +52,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={`${styles.main__nav} container`}>
+      <div className={`${styles.main__nav}`}>
         <Navbar />
       </div>
 

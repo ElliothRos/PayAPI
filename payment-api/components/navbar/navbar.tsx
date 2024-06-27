@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} container`}>
       <Link href={"/"}><Image className={styles.header__logo} src={logo} alt="PayAPI logo" /></Link>
       <nav ref={navRef} className={styles.nav}>
         <ul className={styles.nav__links}>

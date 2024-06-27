@@ -16,7 +16,7 @@ import Footer from "@/components/footer/footer";
 export default function Contact() {
   return (
     <main className={styles.main}>
-      <div className={`container ${styles.nav}`}>
+      <div className={`${styles.nav}`}>
         <Navbar />
       </div>
 
