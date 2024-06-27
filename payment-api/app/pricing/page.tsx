@@ -5,6 +5,7 @@ import "../../util/variables.scss";
 import Offer, { OfferProps } from "@/components/offer/offer";
 import Footer from "@/components/footer/footer";
 import Ready from "@/components/ready/ready";
+import TopCircle from "@/components/topcircle/topcircle";
 
 export default function Pricing() {
   const offers: OfferProps[] = [
@@ -53,6 +54,10 @@ export default function Pricing() {
     <main className={styles.main}>
       <div className={`${styles.main__nav}`}>
         <Navbar />
+      </div>
+
+      <div className={styles.topcircle}>
+        <TopCircle />
       </div>
 
       <section className={`${styles.offers} container`}>

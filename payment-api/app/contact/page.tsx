@@ -12,12 +12,17 @@ import nvidiaLogo from "../../assets/shared/desktop/nvidia.svg";
 import Image from "next/image";
 import Ready from "@/components/ready/ready";
 import Footer from "@/components/footer/footer";
+import TopCircle from "@/components/topcircle/topcircle";
 
 export default function Contact() {
   return (
     <main className={styles.main}>
       <div className={`${styles.nav}`}>
         <Navbar />
+      </div>
+
+      <div className={styles.topcircle}>
+        <TopCircle />
       </div>
 
       <section className={`container ${styles.contact}`}>

@@ -7,12 +7,17 @@ import imgMobile from "../../assets/about/mobile/image-team-members.jpg";
 import imgTablet from "../../assets/about/tablet/image-team-members.jpg";
 import Ready from "@/components/ready/ready";
 import Footer from "@/components/footer/footer";
+import TopCircle from "@/components/topcircle/topcircle";
 
 export default function About() {
   return (
     <main className={styles.main}>
       <div className={`container ${styles.nav}`}>
         <Navbar />
+      </div>
+
+      <div className={styles.topcircle}>
+        <TopCircle />
       </div>
 
       <section className={`${styles.intro} container`}>

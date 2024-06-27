@@ -1,0 +1,33 @@
+.circle {
+  position: absolute;
+  height: 48.75rem;
+  width: 48.75rem;
+  background-image: url("/bg-pattern-circle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: -32rem;
+  top: -39rem;
+  // overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .circle {
+    right: -31rem;
+    top: -30rem;
+  }
+}
+
+
+@media (min-width: 1026px) {
+  .circle {
+    right: -10rem;
+    top: -34rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  .circle {
+    right: -5rem;
+    top: -34rem;
+  }
+}
