@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
 import Navbar from "@/components/navbar/navbar";
-import lol from "../assets/home/desktop/illustration-phone-mockup.svg";
+import heroImg from "../assets/home/desktop/illustration-phone-mockup.svg";
 import "../util/variables.scss";
 import EmailInput from "@/components/emailInput/emailInput";
 import Link from "next/link";
@@ -52,117 +52,141 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={`${styles.main__nav}`}>
+      <div className={styles.nav}>
         <Navbar />
       </div>
 
-      <div className={styles.hero}>
-        <Image className={styles.hero__bgcircle} src={circle} alt="Circle" />
-
-        <Image className={styles.hero__img} src={lol} alt="Mobile phone" />
-
-        <div className={styles.hero__content}>
-          <h3 className={`h3--big ${styles.hero__content_title}`}>
-            Start building with our APIs for absolutely free.
-          </h3>
-          <form className={styles.hero__content_form}>
-            <div className={styles.hero__content_form_input}>
-              <EmailInput />
-            </div>
-            <button
-              className={`btn btn-primary ${styles.hero__content_form_btn}`}
-            >
-              Schedule a Demo
-            </button>
-          </form>
-
-          <p className={styles.hero__content_questions}>
-            Have any questions?{" "}
-            <Link className={styles.hero__content_link} href={"#"}>
-              Contact us
-            </Link>
-          </p>
+      <section className={styles.hero}>
+        <div className={`${styles.hero__container} container`}>
+          <Image className={styles.hero__bgcircle} src={circle} alt="Circle" />
+          <Image
+            className={styles.hero__img}
+            src={heroImg}
+            alt="Mobile phone"
+          />
+          <div className={styles.hero__content}>
+            <h3 className={`h3--big ${styles.hero__content_title}`}>
+              Start building with our APIs for absolutely free.
+            </h3>
+            <form className={styles.hero__content_form}>
+              <div className={styles.hero__content_form_input}>
+                <EmailInput />
+              </div>
+              <button className={`btn btn-primary`}>Schedule a Demo</button>
+            </form>
+            <p className={styles.hero__content_contact}>
+              Have any questions?{" "}
+              <Link className={styles.hero__content_link} href={"#"}>
+                Contact us
+              </Link>
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.partners}>
-        <div className={styles.partners__logos}>
-          <Image
-            className={styles.partners__logo}
-            src={teslaLogo}
-            alt="Tesla logo"
-          />
-          <Image
-            className={styles.partners__logo}
-            src={microsoftLogo}
-            alt="Microsoft logo"
-          />
-          <Image className={styles.partners__logo} src={hpLogo} alt="HP logo" />
-          <Image
-            className={styles.partners__logo}
-            src={oracleLogo}
-            alt="Oracle logo"
-          />
-          <Image
-            className={styles.partners__logo}
-            src={googleLogo}
-            alt="Google logo"
-          />
-          <Image
-            className={styles.partners__logo}
-            src={nvidiaLogo}
-            alt="Nvidia logo"
-          />
-        </div>
-        <h3 className={`h3--big ${styles.partners__title}`}>
-          Who we work with
-        </h3>
-        <p className={styles.partners__text}>
-          Today, millions of people around the world have successfully connected
-          their accounts to apps they love using our API. We provide developers
-          with the tools they need to create easy and accessible experiences for
-          their users.
-        </p>
-        <button className={`btn btn-ghost ${styles.partners__btn}`}>
-          About Us
-        </button>
-      </div>
-
-      <section className={styles.features_}>
-        <div className={styles.features__primary}>
-          <div className={styles.features__primary_easy}>
+      <section className={styles.partners}>
+        <Image
+          className={styles.partners__bgcircle}
+          src={circle}
+          alt="Circle"
+        />
+        <div className={`${styles.partners__container} container`}>
+          <div className={styles.partners__logos}>
             <Image
-              className={styles.features__primary_easy_img}
+              className={styles.partners__logos_tesla}
+              src={teslaLogo}
+              alt="Tesla logo"
+            />
+            <Image
+              className={styles.partners__logos_microsoft}
+              src={microsoftLogo}
+              alt="Microsoft logo"
+            />
+            <Image
+              className={styles.partners__logos_hp}
+              src={hpLogo}
+              alt="HP logo"
+            />
+            <Image
+              className={styles.partners__logos_oracle}
+              src={oracleLogo}
+              alt="Oracle logo"
+            />
+            <Image
+              className={styles.partners__logos_google}
+              src={googleLogo}
+              alt="Google logo"
+            />
+            <Image
+              className={styles.partners__logos_nvidia}
+              src={nvidiaLogo}
+              alt="Nvidia logo"
+            />
+          </div>
+          <div className={styles.partners__content}>
+            <h3 className={`h3--big ${styles.partners__content_title}`}>
+              Who we work with
+            </h3>
+            <p className={styles.partners__content_text}>
+              Today, millions of people around the world have successfully
+              connected their accounts to apps they love using our API. We
+              provide developers with the tools they need to create easy and
+              accessible experiences for their users.
+            </p>
+            <button className={`btn btn-ghost ${styles.partners__content_btn}`}>
+              About Us
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.primaryfeatures}>
+        <div className={`${styles.primaryfeatures__container} container`}>
+          <div className={styles.primaryfeatures__ease}>
+            <Image
+              className={styles.primaryfeatures__ease_img}
               src={codeExample}
               alt="code example displaying ease of implementation"
             />
-            <h3 className={`h3--big ${styles.features__primary_easy_title}`}>
-              Easy to implement
-            </h3>
-            <p className={styles.features__primary_easy_text}>
-              Our API comes with just a few lines of code. You'll be up and
-              running in no time. We built our documentation page to integrate
-              payments functionality with ease.
-            </p>
+            <div className={styles.primaryfeatures__ease_content}>
+              <h3 className={styles.primaryfeatures__ease_content_title}>
+                Easy to implement
+              </h3>
+              <p className={styles.primaryfeatures__ease_content_text}>
+                Our API comes with just a few lines of code. You'll be up and
+                running in no time. We built our documentation page to integrate
+                payments functionality with ease.
+              </p>
+            </div>
           </div>
 
-          <div className={styles.features__primary_simple}>
+          <div className={styles.primaryfeatures__simple}>
             <Image
-              className={styles.features__primary_simple_img}
+              className={styles.primaryfeatures__simple_img}
               src={simpleUI}
-              alt="image showingcasing the simple UI"
+              alt="image showcasing the simple UI"
             />
-            <h3 className={`h3--big ${styles.features__primary_simple_title}`}>
-              Simple UI & UX
-            </h3>
-            <p className={styles.features__primary_simple_text}>
-              Our pre-built form is easy to integrate in your app or website's
-              checkout flow and designed to optimize conversion.
-            </p>
+            <Image
+              className={styles.primaryfeatures__simple_bgcircle}
+              src={circle}
+              alt="Circle"
+            />
+
+            <div className={styles.primaryfeatures__simple_content}>
+              <h3 className={styles.primaryfeatures__simple_content_title}>
+                Simple UI & UX
+              </h3>
+              <p className={styles.primaryfeatures__simple_content_text}>
+                Our pre-built form is easy to integrate in your app or website's
+                checkout flow and designed to optimize conversion.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className={styles.features__secondary}>
+      <section className={styles.secondaryfeatures}>
+        <div className={`${styles.secondaryfeatures__container} container`}>
           {secondaryFeatures.map((feature, index) => (
             <SecondaryFeature
               key={index}
@@ -174,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.ready}>
+      <section>
         <Ready />
       </section>
 
