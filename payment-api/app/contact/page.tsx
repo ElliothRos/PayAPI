@@ -14,6 +14,8 @@ import Ready from "@/components/ready/ready";
 import Footer from "@/components/footer/footer";
 import TopCircle from "@/components/topcircle/topcircle";
 
+import Partners from "@/components/partners/partners";
+
 export default function Contact() {
   return (
     <main className={styles.main}>
@@ -36,38 +38,7 @@ export default function Contact() {
               Join the thousands of innovators already building with us
             </h3>
 
-            <div className={styles.partners__logos}>
-              <Image
-                className={styles.partners__logo}
-                src={teslaLogo}
-                alt="Tesla logo"
-              />
-              <Image
-                className={styles.partners__logo}
-                src={microsoftLogo}
-                alt="Microsoft logo"
-              />
-              <Image
-                className={styles.partners__logo}
-                src={hpLogo}
-                alt="HP logo"
-              />
-              <Image
-                className={styles.partners__logo}
-                src={oracleLogo}
-                alt="Oracle logo"
-              />
-              <Image
-                className={styles.partners__logo}
-                src={googleLogo}
-                alt="Google logo"
-              />
-              <Image
-                className={styles.partners__logo}
-                src={nvidiaLogo}
-                alt="Nvidia logo"
-              />
-            </div>
+            <Partners blue={true} />
           </div>
         </div>
       </section>

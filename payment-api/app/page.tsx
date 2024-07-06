@@ -27,6 +27,7 @@ import SecondaryFeature, {
 } from "@/components/secondaryFeature/secondaryFeature";
 import Footer from "@/components/footer/footer";
 import Ready from "@/components/ready/ready";
+import Partners from "@/components/partners/partners";
 
 export default function Home() {
   const secondaryFeatures: SecondaryFeatureProps[] = [
@@ -91,38 +92,7 @@ export default function Home() {
           alt="Circle"
         />
         <div className={`${styles.partners__container} container`}>
-          <div className={styles.partners__logos}>
-            <Image
-              className={styles.partners__logos_tesla}
-              src={teslaLogo}
-              alt="Tesla logo"
-            />
-            <Image
-              className={styles.partners__logos_microsoft}
-              src={microsoftLogo}
-              alt="Microsoft logo"
-            />
-            <Image
-              className={styles.partners__logos_hp}
-              src={hpLogo}
-              alt="HP logo"
-            />
-            <Image
-              className={styles.partners__logos_oracle}
-              src={oracleLogo}
-              alt="Oracle logo"
-            />
-            <Image
-              className={styles.partners__logos_google}
-              src={googleLogo}
-              alt="Google logo"
-            />
-            <Image
-              className={styles.partners__logos_nvidia}
-              src={nvidiaLogo}
-              alt="Nvidia logo"
-            />
-          </div>
+          <Partners />
           <div className={styles.partners__content}>
             <h3 className={`h3--big ${styles.partners__content_title}`}>
               Who we work with

@@ -6,7 +6,6 @@
   position: relative;
 }
 
-
 .contact {
   &__title {
     margin-top: 3rem;
@@ -34,19 +33,6 @@
     margin: 0 auto;
     margin-bottom: 2rem;
   }
-
-  &__logos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 2.5rem;
-    align-items: center;
-    max-width: 20.43rem;
-    margin: 0 auto;
-
-    & > *:nth-child(2n) {
-      justify-self: end;
-    }
-  }
 }
 
 @media (min-width: 768px) {
@@ -65,16 +51,6 @@
 
     &__title {
       max-width: 27.8125rem;
-    }
-
-    &__logos {
-      grid-template-columns: 1fr 1fr 1fr;
-      max-width: 33.75rem;
-      place-items: center;
-
-      & > *:nth-child(2n) {
-        justify-self: auto;
-      }
     }
   }
 }
@@ -112,13 +88,6 @@
       text-align: left;
       margin: 0;
       margin-bottom: 2.5rem;
-      margin-left: 1.6rem;
-    }
-
-    &__logos {
-      max-width: 33.8rem;
-      width: 100%;
-      margin: 0;
     }
   }
 }
