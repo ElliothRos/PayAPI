@@ -26,9 +26,7 @@ export default function About() {
         </div>
       </section>
 
-      <div className={styles.teamImg}>
-        <Image src />
-      </div>
+      <div className={styles.teamImg}></div>
     </main>
   );
 }
