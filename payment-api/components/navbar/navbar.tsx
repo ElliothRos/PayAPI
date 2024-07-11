@@ -7,7 +7,8 @@ import openIcon from "../../assets/shared/mobile/menu.svg";
 import closeIcon from "../../assets/shared/mobile/close.svg";
 import styles from "./navbar.module.scss";
 import Link from "next/link";
-import "../../util/variables.scss"
+import "../../util/variables.scss";
+import circle from "../../assets/shared/desktop/bg-pattern-circle.svg";
 
 export default function Navbar() {
   const navRef = useRef<HTMLInputElement>(null);
@@ -18,7 +19,9 @@ export default function Navbar() {
 
   return (
     <header className={`${styles.header} container`}>
-      <Link href={"/"}><Image className={styles.header__logo} src={logo} alt="PayAPI logo" /></Link>
+      <Link href={"/"}>
+        <Image className={styles.header__logo} src={logo} alt="PayAPI logo" />
+      </Link>
       <nav ref={navRef} className={styles.nav}>
         <ul className={styles.nav__links}>
           <li>
@@ -38,7 +41,9 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <button className={`btn btn-primary ${styles.nav__btn_schedule}`}>Schedule a Demo</button>
+        <button className={`btn btn-primary ${styles.nav__btn_schedule}`}>
+          Schedule a Demo
+        </button>
 
         <button className={`${styles.nav__btn} ${styles.nav__btn_close}`}>
           <Image src={closeIcon} alt="Close navbar icon" onClick={showNavbar} />
