@@ -103,9 +103,13 @@ export default function Home() {
               provide developers with the tools they need to create easy and
               accessible experiences for their users.
             </p>
-            <button className={`btn btn-ghost ${styles.partners__content_btn}`}>
-              About Us
-            </button>
+            <Link href={"/about"}>
+              <button
+                className={`btn btn-ghost ${styles.partners__content_btn}`}
+              >
+                About Us
+              </button>
+            </Link>
           </div>
         </div>
       </section>
