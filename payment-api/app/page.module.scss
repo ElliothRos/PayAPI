@@ -89,15 +89,12 @@
 
     &_text {
       margin-top: 1rem;
+      margin-bottom: 2rem;
       font-size: $font-size-15px;
       color: $primary-link-water-white;
       opacity: 0.7;
       font-family: var(--font-public-sans);
       line-height: 28px;
-    }
-
-    &_btn {
-      margin-top: 2rem;
     }
   }
 }
